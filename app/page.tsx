@@ -86,7 +86,7 @@ export default function HomePage() {
           </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
-            Guard Everyone You Love<br />
+            Guard Everything That Matters<br />
             <span className="gradient-text">From Cyber Threats</span>
           </h1>
 
@@ -257,10 +257,10 @@ export default function HomePage() {
       <section className="bg-gradient-to-r from-cyan-600/20 via-blue-600/20 to-violet-600/20 border-y border-cyan-500/20 py-16">
         <div className="max-w-3xl mx-auto text-center px-4">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-            Your business is a target. <span className="gradient-text">Don&apos;t wait to find out.</span>
+            Cyber threats don&apos;t wait. <span className="gradient-text">Neither should you.</span>
           </h2>
           <p className="text-slate-300 mb-8">
-            Contact BV CyberGuardian today for a free security assessment.
+            Whether you run a business, build an audience, or just want to protect your family — get a free security assessment today.
           </p>
           <Link
             href="/contact"

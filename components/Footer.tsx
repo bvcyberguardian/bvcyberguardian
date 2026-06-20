@@ -19,7 +19,7 @@ export default function Footer() {
               <BVLogo variant="full" />
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs mb-5">
-              Guarding your business from cyber threats with over 25 years of enterprise IT and cybersecurity expertise.
+              Protecting businesses, creators, entrepreneurs, and families with 25+ years of enterprise cybersecurity expertise.
             </p>
             <div className="space-y-2 mb-5">
               <a href="tel:6463025562" className="flex items-center gap-2 text-sm text-slate-400 hover:text-[#00c8e0] transition-colors">
