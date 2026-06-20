@@ -15,10 +15,10 @@ export default function Credentials() {
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-extrabold text-white mb-3">
-          Certified <span className="gradient-text">Expertise</span>
+          AI <span className="gradient-text">Certified</span>
         </h2>
         <p className="text-slate-400 max-w-xl mx-auto">
-          Our credentials back up our expertise — verified, current, and relevant to protecting your business.
+          Our team holds verified AI credentials — ensuring we apply the latest AI-powered tools to protect your digital world.
         </p>
       </div>
 
@@ -33,7 +33,7 @@ export default function Credentials() {
               </div>
               <div>
                 <div className="text-white font-bold">Google</div>
-                <div className="text-slate-500 text-xs">via Coursera · Issued Jun 18, 2026</div>
+                <div className="text-slate-500 text-xs">via Coursera · Issued Jun 2026</div>
               </div>
             </div>
             <div className="flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold px-3 py-1.5 rounded-full">
@@ -42,20 +42,20 @@ export default function Credentials() {
             </div>
           </div>
 
-          {/* Title + holder */}
+          {/* Title */}
           <div className="flex items-start gap-3">
             <div className="p-2.5 rounded-xl bg-blue-500/10 shrink-0 mt-0.5">
               <Brain className="w-5 h-5 text-blue-400" />
             </div>
             <div>
               <h3 className="text-white font-bold text-lg leading-snug">Google AI Professional Certificate</h3>
-              <p className="text-cyan-400 text-sm font-medium mt-0.5">Adiel Sergio Brito</p>
+              <p className="text-cyan-400 text-sm font-medium mt-0.5">BV Cyber Guardian Team</p>
             </div>
           </div>
 
           {/* Description */}
           <p className="text-slate-400 text-sm leading-relaxed">
-            Fluent in AI across 7 courses — demonstrating the ability to apply AI tools responsibly to brainstorming, research, communication, content creation, data analysis, and app building. Includes a portfolio of 20+ AI-built artifacts and a custom AI solution.
+            Certified across 7 AI courses — demonstrating the ability to apply AI tools responsibly to threat research, communication, content analysis, data insights, and custom AI solution development. Includes a portfolio of 20+ AI-built artifacts.
           </p>
 
           {/* 7 courses grid */}

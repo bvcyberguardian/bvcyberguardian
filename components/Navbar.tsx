@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/msp", label: "MSP" },
   { href: "/it-consulting", label: "IT Consulting" },
   { href: "/cybernews", label: "CyberNews" },
+  { href: "/newsletter", label: "Newsletter" },
   { href: "/helpdesk", label: "Help Desk" },
 ];
 

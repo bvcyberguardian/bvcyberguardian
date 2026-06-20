@@ -5,6 +5,7 @@ import {
 } from "lucide-react";
 import Credentials from "@/components/Credentials";
 import WhoWeProtect from "@/components/WhoWeProtect";
+import NewsletterSignup from "@/components/NewsletterSignup";
 
 const stats = [
   { value: "43%", label: "of cyberattacks target small businesses" },
@@ -81,19 +82,19 @@ export default function HomePage() {
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
             <Shield className="w-4 h-4" />
-            Serving NY &amp; NJ Small Businesses
+            Serving NY &amp; NJ — Businesses, Creators &amp; Families
           </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
-            Guard Your Business<br />
+            Guard Everyone You Love<br />
             <span className="gradient-text">From Cyber Threats</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            BV CyberGuardian is a managed security provider with over 25 years of enterprise expertise — protecting small businesses like yours around the clock.
+          <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-8 leading-relaxed">
+            BV Cyber Guardian brings 25+ years of enterprise security expertise to businesses, content creators, entrepreneurs, and everyday families — protecting what matters most, around the clock.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-lg transition-all hover:scale-105"
@@ -107,6 +108,24 @@ export default function HomePage() {
             >
               View Services
             </Link>
+          </div>
+
+          {/* Audience chips */}
+          <div className="flex flex-wrap gap-2 justify-center">
+            {[
+              { label: "Small Businesses", href: "/for-business", color: "border-cyan-500/30 text-cyan-400" },
+              { label: "Content Creators", href: "/for-creators", color: "border-violet-500/30 text-violet-400" },
+              { label: "Entrepreneurs", href: "/for-entrepreneurs", color: "border-amber-500/30 text-amber-400" },
+              { label: "Home Users", href: "/for-home", color: "border-emerald-500/30 text-emerald-400" },
+            ].map((a) => (
+              <Link
+                key={a.href}
+                href={a.href}
+                className={`inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/5 border text-xs font-medium hover:bg-white/10 transition-colors ${a.color}`}
+              >
+                {a.label} →
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -230,6 +249,9 @@ export default function HomePage() {
 
       {/* Credentials */}
       <Credentials />
+
+      {/* Newsletter */}
+      <NewsletterSignup />
 
       {/* CTA Banner */}
       <section className="bg-gradient-to-r from-cyan-600/20 via-blue-600/20 to-violet-600/20 border-y border-cyan-500/20 py-16">
