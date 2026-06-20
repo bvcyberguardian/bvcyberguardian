@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#060e1f] border-t border-[#00c8e0]/10 mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div className="md:col-span-2">
             <Link href="/" className="inline-block mb-5 hover:opacity-90 transition-opacity">
               <BVLogo variant="full" />
@@ -68,11 +68,31 @@ export default function Footer() {
           </div>
 
           <div>
+            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Who We Protect</h3>
+            <ul className="space-y-2">
+              {[
+                { href: "/for-business", label: "Small Businesses" },
+                { href: "/for-creators", label: "Content Creators" },
+                { href: "/for-entrepreneurs", label: "Entrepreneurs" },
+                { href: "/for-home", label: "Home Users" },
+              ].map(({ href, label }) => (
+                <li key={href}>
+                  <Link href={href} className="text-slate-400 hover:text-[#00c8e0] text-sm transition-colors">
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
             <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Company</h3>
             <ul className="space-y-2">
               {[
                 { href: "/cybernews", label: "CyberNews" },
+                { href: "/newsletter", label: "Newsletter" },
                 { href: "/contact", label: "Contact Us" },
+                { href: "/privacy-policy", label: "Privacy Policy" },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="text-slate-400 hover:text-[#00c8e0] text-sm transition-colors">
