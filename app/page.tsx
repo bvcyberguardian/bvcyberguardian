@@ -6,6 +6,7 @@ import {
 import Credentials from "@/components/Credentials";
 import WhoWeProtect from "@/components/WhoWeProtect";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import Reviews from "@/components/Reviews";
 
 const stats = [
   { value: "43%", label: "of cyberattacks target small businesses" },
@@ -62,14 +63,14 @@ const highlights = [
   { icon: Clock, text: "25+ years of enterprise IT & cybersecurity expertise" },
   { icon: Shield, text: "Proactive monitoring — threats stopped before they hit" },
   { icon: CheckCircle, text: "Compliance, DR planning, and network management" },
-  { icon: Star, text: "Dedicated to NY & NJ small and mid-sized businesses" },
+  { icon: Star, text: "Serving businesses, creators, entrepreneurs & families across NY & NJ" },
 ];
 
 export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+      <section className="relative flex items-center justify-center overflow-hidden pt-28 pb-20">
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -149,7 +150,7 @@ export default function HomePage() {
             Complete <span className="gradient-text">Cybersecurity Coverage</span>
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto">
-            Everything your business needs to stay protected, compliant, and running — under one roof.
+            Everything you need to stay protected, compliant, and running — whether you&apos;re a business, a creator, or a family.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -170,6 +171,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Reviews */}
+      <Reviews />
+
       {/* Who We Protect */}
       <WhoWeProtect />
 
@@ -181,7 +185,7 @@ export default function HomePage() {
               Know Your <span className="gradient-text">Threat Landscape</span>
             </h2>
             <p className="text-slate-400 max-w-xl mx-auto">
-              Cybercriminals don&apos;t take days off. Here are the threats most likely to target your business right now.
+              Cybercriminals don&apos;t take days off. Here are the threats most likely targeting businesses, creators, and individuals right now.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -216,7 +220,7 @@ export default function HomePage() {
               Why Choose <span className="gradient-text">BV CyberGuardian?</span>
             </h2>
             <p className="text-slate-400 leading-relaxed mb-8">
-              We are not a generic IT company. We are cybersecurity specialists who understand the unique risks facing small and mid-sized businesses in the NY/NJ metro region — and we have the enterprise-grade expertise to stop them.
+              We are not a generic IT company. We are cybersecurity specialists who understand the unique risks facing businesses, creators, entrepreneurs, and families across the NY/NJ metro region — and we have the enterprise-grade expertise to stop them.
             </p>
             <ul className="space-y-4">
               {highlights.map((h) => (
