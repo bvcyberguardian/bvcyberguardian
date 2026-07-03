@@ -66,10 +66,10 @@ const services = [
 ];
 
 const audiences = [
-  { label: "Small Businesses", desc: "Keep your team productive with fast, reliable IT support that doesn't break the budget.", color: "text-cyan-400", border: "border-cyan-500/20" },
-  { label: "Content Creators", desc: "Gear issues, software crashes, storage problems — get back to creating without lost time.", color: "text-violet-400", border: "border-violet-500/20" },
-  { label: "Entrepreneurs", desc: "Solo or small team? We're your on-call IT department so you can focus on your business.", color: "text-amber-400", border: "border-amber-500/20" },
-  { label: "Home Users", desc: "Simple, patient support for everyday tech problems — no jargon, just solutions.", color: "text-emerald-400", border: "border-emerald-500/20" },
+  { label: "Small Businesses", href: "/for-business", desc: "Keep your team productive with fast, reliable IT support that doesn't break the budget.", color: "text-cyan-400", border: "border-cyan-500/20" },
+  { label: "Content Creators", href: "/for-creators", desc: "Gear issues, software crashes, storage problems — get back to creating without lost time.", color: "text-violet-400", border: "border-violet-500/20" },
+  { label: "Entrepreneurs", href: "/for-entrepreneurs", desc: "Solo or small team? We're your on-call IT department so you can focus on your business.", color: "text-amber-400", border: "border-amber-500/20" },
+  { label: "Home Users", href: "/for-home", desc: "Simple, patient support for everyday tech problems — no jargon, just solutions.", color: "text-emerald-400", border: "border-emerald-500/20" },
 ];
 
 export default function ITSupportPage() {
@@ -97,11 +97,11 @@ export default function ITSupportPage() {
               Get Support Now <ArrowRight className="w-5 h-5" />
             </Link>
             <a
-              href="tel:6463025562"
+              href="tel:3475156775"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold text-lg transition-all"
             >
               <Phone className="w-5 h-5 text-cyan-400" />
-              (646) 302-5562
+              (347) 515-6775
             </a>
           </div>
         </div>
@@ -147,10 +147,10 @@ export default function ITSupportPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {audiences.map((a) => (
-              <div key={a.label} className={`card-cyber rounded-2xl p-6 border ${a.border}`}>
-                <h3 className={`font-bold mb-2 ${a.color}`}>{a.label}</h3>
+              <Link key={a.label} href={a.href} className={`card-cyber rounded-2xl p-6 border ${a.border} block hover:bg-white/5 transition-colors`}>
+                <h3 className={`font-bold mb-2 ${a.color}`}>{a.label} →</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{a.desc}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -187,14 +187,14 @@ export default function ITSupportPage() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Need ongoing support?</h3>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Our Managed Security &amp; IT plans include unlimited help desk support, proactive monitoring, and cybersecurity protection — all for a predictable monthly fee. Better value than pay-per-incident.
+                Our Managed IT (MSP) plans include unlimited help desk support, proactive monitoring, and cybersecurity protection — all for a predictable monthly fee. Better value than pay-per-incident.
               </p>
             </div>
             <Link
               href="/msp"
               className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold transition-all"
             >
-              View MSP Plans <ArrowRight className="w-4 h-4" />
+              View MSP Info <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -215,11 +215,11 @@ export default function ITSupportPage() {
               Contact Us <ArrowRight className="w-5 h-5" />
             </Link>
             <a
-              href="tel:6463025562"
+              href="tel:3475156775"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold text-lg transition-all"
             >
               <Phone className="w-5 h-5 text-cyan-400" />
-              Call (646) 302-5562
+              Call (347) 515-6775
             </a>
           </div>
         </div>

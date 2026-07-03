@@ -346,7 +346,7 @@ export default function PrivacyPolicyPage() {
               <p className="text-slate-400">Hoboken, NJ 07030</p>
               <p className="text-slate-400">United States</p>
               <a href={`mailto:${EMAIL}`} className="text-cyan-400 hover:text-cyan-300 block pt-1">{EMAIL}</a>
-              <a href="tel:6463025562" className="text-cyan-400 hover:text-cyan-300 block">(646) 302-5562</a>
+              <a href="tel:3475156775" className="text-cyan-400 hover:text-cyan-300 block">(347) 515-6775</a>
             </div>
           </Section>
 

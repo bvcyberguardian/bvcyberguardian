@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Shield, Clock, Eye, Lock, Server, CheckCircle, ArrowRight, Phone, Monitor, Users, Wrench } from "lucide-react";
 
 export const metadata = {
-  title: "Managed Security Services (MSP) | BV CyberGuardian",
+  title: "Managed IT Services (MSP) | BV CyberGuardian",
   description: "24/7 managed cybersecurity for NY & NJ small businesses. Threat monitoring, incident response, patch management, and more.",
 };
 
@@ -23,7 +23,7 @@ export default function MSPPage() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-5">
             <Shield className="w-4 h-4" />
-            Managed Security Provider
+            Managed IT Provider
           </div>
           <h1 className="text-4xl font-extrabold text-white mb-4">
             Always-On <span className="gradient-text">Cyber Protection</span>

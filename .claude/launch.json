@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "bvcyberguardian",
-      "runtimeExecutable": "/usr/local/bin/node",
+      "runtimeExecutable": "/tmp/node-v20.19.2-darwin-arm64/bin/node",
       "runtimeArgs": ["node_modules/.bin/next", "dev", "--port", "3001"],
       "port": 3001
     }

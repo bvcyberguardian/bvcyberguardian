@@ -22,8 +22,41 @@ export default function Credentials() {
         </p>
       </div>
 
-      <div className="flex justify-center">
-        <div className="card-cyber rounded-2xl p-6 w-full max-w-2xl flex flex-col gap-5">
+      <div className="flex flex-col items-center gap-6 max-w-2xl mx-auto">
+
+        {/* CompTIA AI Essentials */}
+        <div className="card-cyber rounded-2xl p-6 w-full flex flex-col gap-5">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-11 h-11 rounded-xl bg-red-600 flex items-center justify-center font-extrabold text-white text-sm shadow-lg">
+                CT+
+              </div>
+              <div>
+                <div className="text-white font-bold">CompTIA</div>
+                <div className="text-slate-500 text-xs">Issued Jun 2026</div>
+              </div>
+            </div>
+            <div className="flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold px-3 py-1.5 rounded-full">
+              <BadgeCheck className="w-3.5 h-3.5" />
+              Verified
+            </div>
+          </div>
+          <div className="flex items-start gap-3">
+            <div className="p-2.5 rounded-xl bg-red-500/10 shrink-0 mt-0.5">
+              <Brain className="w-5 h-5 text-red-400" />
+            </div>
+            <div>
+              <h3 className="text-white font-bold text-lg leading-snug">CompTIA AI Essentials</h3>
+              <p className="text-cyan-400 text-sm font-medium mt-0.5">BV Cyber Guardian Team</p>
+            </div>
+          </div>
+          <p className="text-slate-400 text-sm leading-relaxed">
+            Vendor-neutral AI certification covering AI fundamentals, machine learning concepts, generative AI, AI ethics, and responsible AI deployment in business environments. Certificate ID: 6-3C6-EQ4AA.
+          </p>
+        </div>
+
+        {/* Google AI Professional Certificate */}
+        <div className="card-cyber rounded-2xl p-6 w-full flex flex-col gap-5">
 
           {/* Issuer header */}
           <div className="flex items-center justify-between">
@@ -82,6 +115,7 @@ export default function Credentials() {
             <ExternalLink className="w-3.5 h-3.5" />
           </a>
         </div>
+
       </div>
     </section>
   );

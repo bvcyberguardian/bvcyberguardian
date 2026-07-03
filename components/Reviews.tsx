@@ -17,32 +17,32 @@ import { Star, ExternalLink } from "lucide-react";
 
 const reviews = [
   {
-    name: "Maria T.",
-    role: "Restaurant Owner, NJ",
+    name: "Gents Barber Studio",
+    role: "Small Business, NY",
     rating: 5,
-    text: "BV Cyber Guardian secured our POS system and trained our staff after we almost fell for a phishing scam. Response time was incredible — they treated us like we were their only client.",
+    text: "We're barbers, not tech experts, and BV CyberGuardian makes cybersecurity easy to understand. They explained everything clearly and set up protections that fit our needs. Their customer service is good. Our client data is safe, and that's priceless for our reputation. One less thing to worry about.",
   },
   {
-    name: "James R.",
-    role: "Content Creator, NY",
+    name: "Jennifer Knight",
+    role: "Home User",
     rating: 5,
-    text: "My YouTube account was almost hijacked. Sergio walked me through every security step and set up monitoring I didn't even know existed. Haven't had a problem since.",
+    text: "It has been a pleasure to work with Sergio at BVCyberGuardian. As someone who doesn't have access to IT expertise through work, it's given me a great sense of security to know that my devices are safe and that I can reach out anytime. I HIGHLY RECOMMEND their reliable and reasonable services!",
   },
   {
-    name: "Lisa M.",
-    role: "Small Business Owner, Brooklyn",
+    name: "Chiqui Cartagena",
+    role: "Personal Client",
     rating: 5,
-    text: "We had a ransomware scare and they were on it within the hour. Completely professional, no panic, just results. I now sleep better knowing they're watching our network.",
+    text: "I HIGHLY recommend this team! I have been working with Sergio for the past six months and could not be happier with his incredible, professional services! With all the advances in technology I was feeling vulnerable, but working with BV CyberGuardian I now feel like I'm in control again and super protected.",
   },
   {
-    name: "David K.",
-    role: "Entrepreneur, Manhattan",
+    name: "Anggela Riveros",
+    role: "Office Manager, Arrow Financial Services",
     rating: 5,
-    text: "They audited our entire remote work setup and found three vulnerabilities our previous IT company missed. Worth every penny — and the monthly briefings keep us sharp.",
+    text: "I can't say enough good things about BV CyberGuardian! Since partnering with them, I've felt a huge weight lifted off my shoulders. Their team is incredibly knowledgeable and responsive — monitoring our systems 24/7 and providing proactive alerts. Their free threat analysis really opened my eyes to vulnerabilities I wasn't aware of.",
   },
 ];
 
-const GOOGLE_REVIEW_URL = "https://g.page/r/YOUR_GOOGLE_PLACE_ID/review"; // Replace with your real Google review link
+const GOOGLE_REVIEW_URL = "https://g.page/r/CZOakkW-S2_tEBM/review";
 
 export default function Reviews() {
   const avgRating = 5.0;

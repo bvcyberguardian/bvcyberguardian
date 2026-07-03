@@ -5,10 +5,10 @@ import { Send, CheckCircle, AlertCircle } from "lucide-react";
 type Status = "idle" | "sending" | "success" | "error";
 
 const services = [
-  "Managed Security (MSP)",
+  "Managed IT (MSP)",
+  "IT Support",
   "IT Consulting",
-  "Help Desk Support",
-  "CyberNews / Threat Intelligence",
+  "AI Services",
   "General Inquiry",
 ];
 

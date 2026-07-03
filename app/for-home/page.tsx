@@ -111,7 +111,7 @@ export default function ForHomePage() {
             <Link href="/contact" className="block text-center px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-[#0a1628] font-bold transition-all mb-3">
               Protect My Family →
             </Link>
-            <p className="text-xs text-slate-500 text-center">(646) 302-5562 · info@bvcyberguardian.com</p>
+            <p className="text-xs text-slate-500 text-center"><a href="tel:3475156775" className="hover:text-[#00c8e0] transition-colors">(347) 515-6775</a> · info@bvcyberguardian.com</p>
           </div>
         </div>
 

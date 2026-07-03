@@ -22,9 +22,9 @@ export default function Footer() {
               Protecting businesses, creators, entrepreneurs, and families with 25+ years of enterprise cybersecurity expertise.
             </p>
             <div className="space-y-2 mb-5">
-              <a href="tel:6463025562" className="flex items-center gap-2 text-sm text-slate-400 hover:text-[#00c8e0] transition-colors">
+              <a href="tel:3475156775" className="flex items-center gap-2 text-sm text-slate-400 hover:text-[#00c8e0] transition-colors">
                 <Phone className="w-3.5 h-3.5 text-[#00c8e0]" />
-                (646) 302-5562
+                (347) 515-6775
               </a>
               <a href="mailto:info@bvcyberguardian.com" className="flex items-center gap-2 text-sm text-slate-400 hover:text-[#00c8e0] transition-colors">
                 <Mail className="w-3.5 h-3.5 text-[#00c8e0]" />
@@ -53,11 +53,11 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Services</h3>
             <ul className="space-y-2">
               {[
-                { href: "/msp", label: "Managed Security & Help Desk" },
+                { href: "/msp", label: "Managed IT (MSP)" },
                 { href: "/it-support", label: "IT Support" },
                 { href: "/it-consulting", label: "IT Consulting" },
                 { href: "/ai-services", label: "AI Services" },
-                { href: "/services", label: "All Services" },
+                { href: "/services", label: "View All Services" },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="text-slate-400 hover:text-[#00c8e0] text-sm transition-colors">

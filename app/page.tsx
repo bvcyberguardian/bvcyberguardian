@@ -18,11 +18,19 @@ const stats = [
 const services = [
   {
     icon: Shield,
-    title: "Managed Security (MSP)",
+    title: "Managed IT (MSP)",
     description: "24/7 proactive monitoring, threat detection, and incident response so threats are neutralized before they reach you.",
     href: "/msp",
     color: "text-cyan-400",
     bg: "bg-cyan-500/10",
+  },
+  {
+    icon: Wrench,
+    title: "IT Support",
+    description: "Fast remote and on-site tech support — hardware, software, network, and device issues resolved for businesses and homes.",
+    href: "/it-support",
+    color: "text-emerald-400",
+    bg: "bg-emerald-500/10",
   },
   {
     icon: Server,
@@ -39,14 +47,6 @@ const services = [
     href: "/ai-services",
     color: "text-violet-400",
     bg: "bg-violet-500/10",
-  },
-  {
-    icon: Wrench,
-    title: "IT Support",
-    description: "Fast remote and on-site tech support — hardware, software, network, and device issues resolved for businesses and homes.",
-    href: "/it-support",
-    color: "text-emerald-400",
-    bg: "bg-emerald-500/10",
   },
 ];
 
@@ -90,12 +90,13 @@ export default function HomePage() {
             Serving NY &amp; NJ — Businesses, Creators &amp; Families
           </div>
 
-          <h1 className="text-4xl font-extrabold text-white leading-tight mb-6">
-            Guard What Matters <span className="gradient-text">From Cyber Threats</span>
+          <h1 className="text-5xl sm:text-6xl font-extrabold text-white leading-tight mb-6">
+            Guard What Matters<br />
+            <span className="gradient-text">From Cyber Threats</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-8 leading-relaxed">
-            BV Cyber Guardian brings 25+ years of enterprise security expertise to businesses, content creators, entrepreneurs, and everyday families — protecting what matters most, around the clock.
+          <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-8 leading-relaxed">
+            25+ years of enterprise security — protecting NY &amp; NJ businesses, creators, entrepreneurs, and families around the clock.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -147,12 +148,12 @@ export default function HomePage() {
       </section>
 
       {/* Services */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-14">
           <h2 className="text-4xl font-extrabold text-white mb-4">
             Complete <span className="gradient-text">Cybersecurity Coverage</span>
           </h2>
-          <p className="text-slate-400 max-w-xl mx-auto">
+          <p className="text-slate-300 max-w-xl mx-auto">
             Everything you need to stay protected, compliant, and running — whether you&apos;re a business, a creator, or a family.
           </p>
         </div>
@@ -165,7 +166,7 @@ export default function HomePage() {
               <h3 className="text-white font-bold text-lg mb-2 group-hover:text-cyan-400 transition-colors">
                 {svc.title}
               </h3>
-              <p className="text-slate-400 text-sm leading-relaxed">{svc.description}</p>
+              <p className="text-slate-300 text-sm leading-relaxed">{svc.description}</p>
               <div className={`flex items-center gap-1 mt-4 text-sm font-medium ${svc.color}`}>
                 Learn more <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
@@ -181,13 +182,13 @@ export default function HomePage() {
       <WhoWeProtect />
 
       {/* Threat Awareness */}
-      <section className="bg-[#060b17] border-y border-cyan-500/10 py-24">
+      <section className="bg-[#060b17] border-y border-cyan-500/10 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-4xl font-extrabold text-white mb-4">
               Know Your <span className="gradient-text">Threat Landscape</span>
             </h2>
-            <p className="text-slate-400 max-w-xl mx-auto">
+            <p className="text-slate-300 max-w-xl mx-auto">
               Cybercriminals don&apos;t take days off. Here are the threats most likely targeting businesses, creators, and individuals right now.
             </p>
           </div>
@@ -199,7 +200,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold mb-1">{t.title}</h3>
-                  <p className="text-slate-400 text-sm">{t.desc}</p>
+                  <p className="text-slate-300 text-sm">{t.desc}</p>
                 </div>
               </div>
             ))}
@@ -216,13 +217,13 @@ export default function HomePage() {
       </section>
 
       {/* Why BV CyberGuardian */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl font-extrabold text-white mb-6">
               Why Choose <span className="gradient-text">BV CyberGuardian?</span>
             </h2>
-            <p className="text-slate-400 leading-relaxed mb-8">
+            <p className="text-slate-300 leading-relaxed mb-8">
               We are not a generic IT company. We are cybersecurity specialists who understand the unique risks facing businesses, creators, entrepreneurs, and families across the NY/NJ metro region — and we have the enterprise-grade expertise to stop them.
             </p>
             <ul className="space-y-4">
@@ -245,7 +246,7 @@ export default function HomePage() {
               href="/contact"
               className="block text-center px-6 py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold transition-all"
             >
-              Yes, I Want That →
+              Book a Free Assessment →
             </Link>
             <p className="text-xs text-slate-500 text-center mt-3">
               Serving NY &amp; NJ · info@bvcyberguardian.com

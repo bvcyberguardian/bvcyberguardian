@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
   try {
@@ -9,21 +10,36 @@ export async function POST(req: NextRequest) {
       return Response.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    // Log to console (replace with email service like Resend, SendGrid, or Nodemailer in production)
-    console.log("Contact form submission:", { name, email, company, phone, service, message });
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT) || 587,
+      secure: process.env.SMTP_SECURE === "true",
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
 
-    // TODO: Add email sending here. Recommended: https://resend.com (free up to 3000 emails/mo)
-    // Example:
-    // const resend = new Resend(process.env.RESEND_API_KEY);
-    // await resend.emails.send({
-    //   from: "website@bvcyberguardian.com",
-    //   to: "info@bvcyberguardian.com",
-    //   subject: `New contact: ${name} — ${service || "General Inquiry"}`,
-    //   text: `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nPhone: ${phone}\nService: ${service}\n\n${message}`,
-    // });
+    await transporter.sendMail({
+      from: process.env.SMTP_USER,
+      to: "info@bvcyberguardian.com",
+      replyTo: email,
+      subject: `New Contact Request: ${name}${service ? ` — ${service}` : ""}`,
+      text: [
+        `Name:    ${name}`,
+        `Email:   ${email}`,
+        `Phone:   ${phone || "—"}`,
+        `Company: ${company || "—"}`,
+        `Service: ${service || "—"}`,
+        ``,
+        `Message:`,
+        message,
+      ].join("\n"),
+    });
 
     return Response.json({ success: true });
-  } catch {
+  } catch (err) {
+    console.error("[Contact] Email error:", err);
     return Response.json({ error: "Server error" }, { status: 500 });
   }
 }

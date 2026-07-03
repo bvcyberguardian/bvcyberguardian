@@ -119,7 +119,7 @@ export default function ForBusinessPage() {
             <Link href="/contact" className="block text-center px-6 py-3.5 rounded-xl bg-[#00c8e0] hover:bg-[#00b5cc] text-[#0a1628] font-bold transition-all mb-3">
               Book My Free Assessment →
             </Link>
-            <p className="text-xs text-slate-500 text-center">Serving NY &amp; NJ · (646) 302-5562</p>
+            <p className="text-xs text-slate-500 text-center">Serving NY &amp; NJ · <a href="tel:3475156775" className="hover:text-[#00c8e0] transition-colors">(347) 515-6775</a></p>
           </div>
         </div>
 

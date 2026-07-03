@@ -9,12 +9,12 @@ export const metadata = {
 const services = [
   {
     icon: Shield,
-    title: "Managed Security (MSP)",
+    title: "Managed IT (MSP)",
     href: "/msp",
     color: "text-cyan-400",
     bg: "bg-cyan-500/10",
     border: "border-cyan-500/20",
-    description: "End-to-end managed security for your business. We monitor, detect, and respond to threats 24/7 — including a full help desk so your team always has support.",
+    description: "End-to-end managed IT and security for your business. We monitor, detect, and respond to threats 24/7 — including a full help desk so your team always has support.",
     features: [
       "24/7 threat monitoring & alerting",
       "Endpoint detection and response (EDR)",
@@ -22,6 +22,23 @@ const services = [
       "Patch management & incident response",
       "Help desk — remote & on-site support",
       "Monthly security reporting",
+    ],
+  },
+  {
+    icon: Wrench,
+    title: "IT Support",
+    href: "/it-support",
+    color: "text-emerald-400",
+    bg: "bg-emerald-500/10",
+    border: "border-emerald-500/20",
+    description: "Responsive remote and on-site tech support for businesses, creators, and home users — hardware, software, network, and device issues resolved fast.",
+    features: [
+      "Remote support — most issues resolved same day",
+      "On-site visits across NY & NJ metro",
+      "Hardware, software & network troubleshooting",
+      "Device setup & configuration",
+      "Data backup & recovery",
+      "Response within 2 business hours",
     ],
   },
   {
@@ -56,23 +73,6 @@ const services = [
       "AI governance & use policies",
       "AI threat protection (deepfakes, phishing)",
       "AI security awareness training",
-    ],
-  },
-  {
-    icon: Wrench,
-    title: "IT Support",
-    href: "/it-support",
-    color: "text-emerald-400",
-    bg: "bg-emerald-500/10",
-    border: "border-emerald-500/20",
-    description: "Responsive remote and on-site tech support for businesses, creators, and home users — hardware, software, network, and device issues resolved fast.",
-    features: [
-      "Remote support — most issues resolved same day",
-      "On-site visits across NY & NJ metro",
-      "Hardware, software & network troubleshooting",
-      "Device setup & configuration",
-      "Data backup & recovery",
-      "Response within 2 business hours",
     ],
   },
 ];

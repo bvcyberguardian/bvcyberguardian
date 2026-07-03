@@ -111,7 +111,7 @@ export default function ForCreatorsPage() {
             <Link href="/contact" className="block text-center px-6 py-3.5 rounded-xl bg-violet-500 hover:bg-violet-400 text-white font-bold transition-all mb-3">
               Get My Creator Security Audit →
             </Link>
-            <p className="text-xs text-slate-500 text-center">(646) 302-5562 · info@bvcyberguardian.com</p>
+            <p className="text-xs text-slate-500 text-center"><a href="tel:3475156775" className="hover:text-[#00c8e0] transition-colors">(347) 515-6775</a> · info@bvcyberguardian.com</p>
           </div>
         </div>
 

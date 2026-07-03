@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
   try {
@@ -7,12 +8,26 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Valid email required." }, { status: 400 });
     }
 
-    // TODO: wire up to an email service (Resend, Mailchimp, ConvertKit, etc.)
-    // For now, log the subscriber so you can manually collect them
-    console.log(`[Newsletter] New subscriber: ${email} at ${new Date().toISOString()}`);
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT) || 587,
+      secure: process.env.SMTP_SECURE === "true",
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
+
+    await transporter.sendMail({
+      from: process.env.SMTP_USER,
+      to: "info@bvcyberguardian.com",
+      subject: "New Newsletter Signup",
+      text: `A new visitor subscribed to the BV CyberGuardian newsletter.\n\nEmail: ${email}`,
+    });
 
     return NextResponse.json({ ok: true });
-  } catch {
-    return NextResponse.json({ error: "Server error." }, { status: 500 });
+  } catch (err) {
+    console.error("[Newsletter] Email error:", err);
+    return NextResponse.json({ error: "Could not save your subscription. Please try again." }, { status: 500 });
   }
 }

@@ -17,28 +17,28 @@ const briefingFeatures = [
 
 const sampleIssues = [
   {
-    date: "Jun 16, 2026",
-    title: "Fake AI Tools Spreading Malware — Don't Download That Chrome Extension",
-    summary: "A wave of browser extensions impersonating popular AI tools (ChatGPT, Gemini, Copilot) are stealing saved passwords and banking credentials. Here's how to spot them and what to do if you already installed one.",
-    tags: ["Malware", "Browser Security", "AI Threats"],
+    date: "Jun 29, 2026",
+    title: "GPT-5.6 Launches as Five Eyes Warn AI Is Being Weaponized Against Businesses",
+    summary: "OpenAI launched GPT-5.6 — its most powerful model yet — on the same day the US, UK, Canada, Australia & New Zealand issued a joint urgent warning about AI being used to attack businesses. Also this week: fake OpenAI workspaces stealing company secrets, a Linux root flaw exploited within 24 hours, and new Mac malware designed to fool AI security tools.",
+    tags: ["AI Threats", "Critical Alert", "macOS", "Linux"],
   },
   {
-    date: "Jun 9, 2026",
-    title: "QR Code Phishing Is Surging — Watch Out at Restaurants, Parking Meters & Events",
-    summary: "Criminals are placing fake QR code stickers over legitimate ones in public places. When you scan them, you're taken to convincing fake payment pages. Tips to protect yourself every time you scan.",
-    tags: ["Phishing", "Mobile Security", "QR Codes"],
+    date: "Jun 22, 2026",
+    title: "30,000 Business Passwords Stolen & an iPhone Flaw That Can Never Be Fixed",
+    summary: "Hackers built a secret database of 30,000 confirmed working passwords for Fortinet networking equipment used in 194 countries. Researchers revealed a hardware flaw in some iPhones and iPads that cannot ever be patched. Plus: malicious fake AI tools stealing developer credentials, and the UK warns AI-written code is creating hidden security disasters.",
+    tags: ["Critical Alert", "Credentials", "iPhone", "AI Threats"],
   },
   {
-    date: "Jun 2, 2026",
-    title: "Ransomware Hit 3 NJ Healthcare Clinics Last Week — What SMBs Can Learn",
-    summary: "Three New Jersey medical practices were knocked offline by a ransomware attack exploiting unpatched software. We break down the attack chain and the five steps every business should take this week.",
-    tags: ["Ransomware", "Healthcare", "SMB"],
+    date: "Jun 15, 2026",
+    title: "Biggest Windows Update Ever, World Cup Scams at Full Force & NY Sports Data Stolen",
+    summary: "Microsoft released 200 security fixes in a single day — the largest Patch Tuesday in history. Hours later a new unpatched Windows flaw dropped. FIFA World Cup scammers are running at full capacity. ShinyHunters claimed data from Madison Square Garden (Knicks & Rangers). Plus: 152 Chrome extensions caught secretly recording everything you do online.",
+    tags: ["Windows", "Phishing", "Data Breach", "Chrome"],
   },
   {
-    date: "May 26, 2026",
-    title: "Your Smart TV Is Watching You Back — How to Lock Down Home Devices",
-    summary: "Consumer IoT devices like smart TVs, doorbells, and baby monitors often send data to overseas servers by default. We walk you through the privacy settings that matter and which devices are the biggest risks.",
-    tags: ["IoT", "Privacy", "Home Security"],
+    date: "Jun 8, 2026",
+    title: "Seven Cisco Zero-Days, World Cup Phishing & a 150M-Device Smart TV Botnet",
+    summary: "A seventh actively exploited Cisco SD-WAN zero-day with no patch available. Over 4,300 fraudulent FIFA domains went live as the World Cup opened. The IronWorm supply chain campaign hit 36 npm packages. A smart TV botnet now spans 150 million home IP addresses. Plus: Belgian courts rule banks must reimburse phishing victims immediately.",
+    tags: ["Critical Alert", "Cisco", "Phishing", "Supply Chain"],
   },
 ];
 
