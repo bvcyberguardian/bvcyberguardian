@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${ibmPlexSans.variable} h-full`}>
+    <html lang="en" className={`${ibmPlexSans.variable} h-full`} suppressHydrationWarning>
       <body className="min-h-full flex flex-col bg-[#0a1628] text-slate-200 antialiased">
         <Navbar />
         <main className="flex-1">{children}</main>

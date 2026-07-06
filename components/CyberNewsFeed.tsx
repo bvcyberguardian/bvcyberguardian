@@ -24,10 +24,16 @@ function timeAgo(dateStr: string): string {
 }
 
 const SOURCE_COLORS: Record<string, string> = {
-  "The Hacker News": "text-orange-400 bg-orange-500/10 border-orange-500/20",
-  "Krebs on Security": "text-red-400 bg-red-500/10 border-red-500/20",
-  "BleepingComputer": "text-blue-400 bg-blue-500/10 border-blue-500/20",
-  "Dark Reading": "text-violet-400 bg-violet-500/10 border-violet-500/20",
+  "The Hacker News":    "text-orange-400 bg-orange-500/10 border-orange-500/20",
+  "Krebs on Security":  "text-red-400 bg-red-500/10 border-red-500/20",
+  "BleepingComputer":   "text-blue-400 bg-blue-500/10 border-blue-500/20",
+  "Dark Reading":       "text-violet-400 bg-violet-500/10 border-violet-500/20",
+  "The Record":         "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
+  "SecurityWeek":       "text-sky-400 bg-sky-500/10 border-sky-500/20",
+  "CISA Alerts":        "text-yellow-400 bg-yellow-500/10 border-yellow-500/20",
+  "Microsoft Security": "text-cyan-400 bg-cyan-500/10 border-cyan-500/20",
+  "Bitdefender Labs":   "text-rose-400 bg-rose-500/10 border-rose-500/20",
+  "NIST NVD":           "text-slate-300 bg-slate-500/10 border-slate-500/20",
 };
 
 export default function CyberNewsFeed() {
@@ -36,7 +42,7 @@ export default function CyberNewsFeed() {
   const [error, setError] = useState(false);
   const [filter, setFilter] = useState("All");
 
-  const sources = ["All", "The Hacker News", "Krebs on Security", "BleepingComputer", "Dark Reading"];
+  const sources = ["All", "CISA Alerts", "Krebs on Security", "The Record", "BleepingComputer", "Dark Reading", "SecurityWeek", "The Hacker News", "Microsoft Security", "Bitdefender Labs", "NIST NVD"];
 
   async function load() {
     setLoading(true);

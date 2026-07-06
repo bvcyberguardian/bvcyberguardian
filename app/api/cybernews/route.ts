@@ -10,10 +10,16 @@ interface FeedItem {
 }
 
 const feeds = [
-  { name: "The Hacker News", url: "https://feeds.feedburner.com/TheHackersNews", site: "thehackernews.com" },
-  { name: "Krebs on Security", url: "https://krebsonsecurity.com/feed/", site: "krebsonsecurity.com" },
-  { name: "BleepingComputer", url: "https://www.bleepingcomputer.com/feed/", site: "bleepingcomputer.com" },
-  { name: "Dark Reading", url: "https://www.darkreading.com/rss.xml", site: "darkreading.com" },
+  { name: "The Hacker News",    url: "https://feeds.feedburner.com/TheHackersNews",                   site: "thehackernews.com" },
+  { name: "Krebs on Security",  url: "https://krebsonsecurity.com/feed/",                             site: "krebsonsecurity.com" },
+  { name: "BleepingComputer",   url: "https://www.bleepingcomputer.com/feed/",                        site: "bleepingcomputer.com" },
+  { name: "Dark Reading",       url: "https://www.darkreading.com/rss.xml",                           site: "darkreading.com" },
+  { name: "The Record",         url: "https://therecord.media/feed",                                  site: "therecord.media" },
+  { name: "SecurityWeek",       url: "https://feeds.feedburner.com/securityweek",                     site: "securityweek.com" },
+  { name: "CISA Alerts",        url: "https://www.cisa.gov/cybersecurity-advisories/all.xml",         site: "cisa.gov" },
+  { name: "Microsoft Security", url: "https://www.microsoft.com/en-us/security/blog/feed/",           site: "microsoft.com/security" },
+  { name: "Bitdefender Labs",   url: "https://www.bitdefender.com/blog/labs/feed/",                   site: "bitdefender.com" },
+  { name: "NIST NVD",           url: "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss-analyzed.xml", site: "nvd.nist.gov" },
 ];
 
 function parseXml(xml: string, sourceName: string, sourceSite: string): FeedItem[] {
@@ -46,7 +52,7 @@ function parseXml(xml: string, sourceName: string, sourceSite: string): FeedItem
       });
     }
 
-    if (items.length >= 8) break;
+    if (items.length >= 6) break;
   }
 
   return items;
@@ -77,5 +83,5 @@ export async function GET(_req: NextRequest) {
     return db - da;
   });
 
-  return Response.json({ items: allItems.slice(0, 30) });
+  return Response.json({ items: allItems.slice(0, 60) });
 }
