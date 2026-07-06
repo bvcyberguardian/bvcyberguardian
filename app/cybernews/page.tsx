@@ -111,7 +111,7 @@ export default function CyberNewsPage() {
           <p className="text-slate-400 text-center mb-10 text-sm">A taste of what lands in your inbox each week.</p>
           <div className="space-y-5">
             {sampleIssues.map((issue) => (
-              <div key={issue.title} className="card-cyber rounded-2xl p-6 flex flex-col gap-3">
+              <Link key={issue.title} href="/cybernews/briefings" className="card-cyber rounded-2xl p-6 flex flex-col gap-3 block">
                 <div className="flex items-center gap-3 flex-wrap">
                   <span className="text-slate-500 text-xs">{issue.date}</span>
                   <div className="flex gap-2 flex-wrap">
@@ -124,13 +124,10 @@ export default function CyberNewsPage() {
                 </div>
                 <h3 className="text-white font-bold text-lg leading-snug">{issue.title}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{issue.summary}</p>
-                <Link
-                  href="/cybernews/briefings"
-                  className="text-[#00c8e0] text-sm font-medium flex items-center gap-1 hover:opacity-80 transition-opacity"
-                >
+                <span className="text-[#00c8e0] text-sm font-medium flex items-center gap-1">
                   Full issue available to subscribers <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
+                </span>
+              </Link>
             ))}
           </div>
           <p className="text-slate-600 text-xs text-center mt-8">Written by BV Cyber Guardian · Powered by AI-assisted threat research · No spam · Unsubscribe anytime</p>
