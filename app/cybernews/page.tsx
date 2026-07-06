@@ -2,6 +2,7 @@ import CyberNewsFeed from "@/components/CyberNewsFeed";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import { Rss, Shield, Mail, Zap, Users, Clock } from "lucide-react";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export const metadata = {
   title: "CyberNews & Weekly Briefing | BV CyberGuardian",
@@ -123,9 +124,12 @@ export default function CyberNewsPage() {
                 </div>
                 <h3 className="text-white font-bold text-lg leading-snug">{issue.title}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{issue.summary}</p>
-                <div className="text-[#00c8e0] text-sm font-medium flex items-center gap-1 opacity-50 cursor-default">
+                <Link
+                  href="/cybernews/briefings"
+                  className="text-[#00c8e0] text-sm font-medium flex items-center gap-1 hover:opacity-80 transition-opacity"
+                >
                   Full issue available to subscribers <ArrowRight className="w-3.5 h-3.5" />
-                </div>
+                </Link>
               </div>
             ))}
           </div>

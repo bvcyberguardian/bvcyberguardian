@@ -37,9 +37,17 @@ function parseXml(xml: string, sourceName: string, sourceSite: string): FeedItem
 
     if (titleMatch && linkMatch) {
       const rawDesc = descMatch?.[1] ?? "";
-      const cleanDesc = rawDesc
-        .replace(/<[^>]+>/g, "")
-        .replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+      // decode entities first (handles double-encoded HTML like CISA feed)
+      const decoded = rawDesc
+        .replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&")
+        .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, " ");
+      const cleanDesc = decoded
+        // strip CDATA wrappers
+        .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
+        // strip all HTML tags
+        .replace(/<[^>]+>/g, " ")
+        // strip leftover code/markup artifacts
+        .replace(/\{[^}]*\}/g, "").replace(/\[[^\]]*\]/g, "")
         .replace(/\s+/g, " ").trim().slice(0, 180);
 
       items.push({
@@ -77,11 +85,19 @@ export async function GET(_req: NextRequest) {
     if (result.status === "fulfilled") allItems.push(...result.value);
   }
 
-  allItems.sort((a, b) => {
-    const da = a.pubDate ? new Date(a.pubDate).getTime() : 0;
-    const db = b.pubDate ? new Date(b.pubDate).getTime() : 0;
+  const oneWeekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
+
+  const filtered = allItems.filter((item) => {
+    if (!item.pubDate) return false;
+    const t = new Date(item.pubDate).getTime();
+    return !isNaN(t) && t >= oneWeekAgo;
+  });
+
+  filtered.sort((a, b) => {
+    const da = new Date(a.pubDate).getTime();
+    const db = new Date(b.pubDate).getTime();
     return db - da;
   });
 
-  return Response.json({ items: allItems.slice(0, 60) });
+  return Response.json({ items: filtered });
 }
