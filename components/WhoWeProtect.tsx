@@ -85,9 +85,9 @@ export default function WhoWeProtect() {
               className={`card-cyber rounded-2xl p-6 flex flex-col group border ${a.border} hover:scale-[1.02]`}
             >
               <div className={`inline-flex p-3 rounded-xl ${a.bg} mb-4 w-fit`}>
-                <a.icon className={`w-6 h-6 ${a.color}`} />
+                <a.icon className={`w-7 h-7 ${a.color}`} />
               </div>
-              <div className={`text-xs font-semibold uppercase tracking-widest ${a.color} mb-1`}>
+              <div className={`text-sm font-semibold uppercase tracking-widest ${a.color} mb-1`}>
                 {a.label}
               </div>
               <h3 className="text-white font-bold text-lg mb-4 leading-snug group-hover:text-[#00c8e0] transition-colors">

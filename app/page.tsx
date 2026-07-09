@@ -126,7 +126,7 @@ export default function HomePage() {
               <Link
                 key={a.href}
                 href={a.href}
-                className={`inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/5 border text-xs font-medium hover:bg-white/10 transition-colors ${a.color}`}
+                className={`inline-flex items-center gap-1 px-5 py-2 rounded-full bg-white/5 border text-sm font-medium hover:bg-white/10 transition-colors ${a.color}`}
               >
                 {a.label} →
               </Link>
