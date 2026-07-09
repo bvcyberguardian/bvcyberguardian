@@ -7,7 +7,7 @@ export const metadata = {
 
 const LAST_UPDATED = "June 20, 2026";
 const COMPANY = "BV CyberGuardian LLC";
-const EMAIL = "sergio@bvcyberguardian.com";
+const EMAIL = "info@bvcyberguardian.com";
 
 export default function PrivacyPolicyPage() {
   return (
